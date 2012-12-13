@@ -4,39 +4,46 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textViewServer"
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/server_label" />
+        android:onClick="doClick"
+        android:text="@string/get_image" />
 
-    <EditText
-        android:id="@+id/editTextServer"
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewServer"
-        android:layout_alignBottom="@+id/textViewServer"
-        android:layout_alignRight="@layout/activity_main"
-        android:layout_marginLeft="34dp"
-        android:layout_toRightOf="@+id/textViewServer"
-        android:inputType="text"
-        android:ems="10"
-        android:text="@string/server_address_default" >
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/error_text"
+        android:max="100"
+        android:paddingLeft="@dimen/bar_pad"
+        android:paddingRight="@dimen/bar_pad"
+        android:visibility="invisible" />
 
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/button1"
+    <TextView
+        android:id="@+id/error_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editTextServer"
-        android:layout_below="@+id/editTextServer"
-        android:layout_marginTop="16dp"
-        android:text="@string/connect" />
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/button2"
+        android:textColor="@color/error_color" />
 
 </RelativeLayout>

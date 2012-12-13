@@ -7,5 +7,6 @@
     <string name="server_label">Server:</string>
     <string name="server_address_default">10.10.10.93</string>
     <string name="connect">Connect</string>
+    <string name="get_image">Get Image</string>
 
 </resources>

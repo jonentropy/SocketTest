@@ -10,17 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/button2" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:onClick="doClick"
-        android:text="@string/get_image" />
+        android:layout_alignParentRight="true" 
+        android:layout_below="@+id/editText1"/>
 
     <ProgressBar
         android:id="@+id/progressBar1"
@@ -30,7 +21,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/error_text"
+        android:layout_below="@+id/editText1"
         android:max="100"
         android:paddingLeft="@dimen/bar_pad"
         android:paddingRight="@dimen/bar_pad"
@@ -40,10 +31,33 @@
         android:id="@+id/error_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/button2"
+        android:layout_below="@+id/button2"
+        android:paddingLeft="@dimen/bar_pad"
+        android:paddingRight="@dimen/bar_pad"
         android:textColor="@color/error_color" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/error_text"
+        android:ems="10"
+        android:text="@string/image_url" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="doClick"
+        android:text="@string/get_image" />
 
 </RelativeLayout>

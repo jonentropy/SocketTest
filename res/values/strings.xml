@@ -8,5 +8,5 @@
     <string name="server_address_default">10.10.10.93</string>
     <string name="connect">Connect</string>
     <string name="get_image">Get Image</string>
-
+    <string name="image_url">http://10.10.10.93/PoweredByMacOSXLarge.gif</string>
 </resources>
